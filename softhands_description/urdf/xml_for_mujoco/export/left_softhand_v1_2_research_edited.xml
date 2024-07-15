@@ -1,0 +1,188 @@
+<mujoco model="left_softhand">
+  <compiler meshdir="/home/esguerri/SoftHand/src/SoftHand-Plugin/softhands_description/meshes/v1_2_research/left/" angle="radian"/>
+  <default>
+    <default class="/">
+      <joint limited="true" stiffness="0.20000000000000001" range="-0.15707963267948966 0.78539816339744828" armature="0.001" damping="0.070000000000000007"/>
+    </default>
+  </default>
+  <asset>
+    <mesh name="flange_iso_04" class="/" file="flange_iso_04.stl" scale="0.001 0.001 0.001"/>
+    <mesh name="palm_pinch" class="/" file="palm_pinch.stl" scale="0.001 0.001 0.001"/>
+    <mesh name="ph_thumb" class="/" file="ph_thumb.stl" scale="0.001 0.001 0.001"/>
+    <mesh name="ph_short" class="/" file="ph_short.stl" scale="0.001 0.001 0.001"/>
+    <mesh name="ph_distal" class="/" file="ph_distal.stl" scale="0.001 0.001 0.001"/>
+    <mesh name="ph_knuckle" class="/" file="ph_knuckle.stl" scale="0.001 0.001 0.001"/>
+    <mesh name="ph_medium" class="/" file="ph_medium.stl" scale="0.001 0.001 0.001"/>
+  </asset>
+  <worldbody>
+    <geom name="//unnamed_geom_0" class="/" type="mesh" contype="1" conaffinity="2" group="1" rgba="0.34999999999999998 0.34999999999999998 0.34999999999999998 1" density="0" pos="0 -0.20000000000000001 0.02" quat="0.70738800000000002 0 0 -0.70682500000000004" mesh="flange_iso_04"/>
+    <geom name="//unnamed_geom_1" class="/" type="mesh" contype="1" conaffinity="2" group="1" rgba="0.34999999999999998 0.34999999999999998 0.34999999999999998 1" density="0" pos="0.0145036 -0.204488 0.16400000000000001" quat="0.50039800000000001 0.5 0.49960199999999999 0.5" mesh="palm_pinch"/>
+    <body name="left_hand_v1_2_research_thumb_knuckle_link" pos="0.016505599999999999 -0.24848999999999999 0.117502" quat="-0.70626100000000003 -0.00056286400000000005 0.00056331199999999995 0.707951">
+      <inertial pos="0.013071599999999999 0.00273463 0.00064090499999999999" quat="0.53145299999999995 0.364062 0.57647899999999996 0.50268100000000004" mass="0.01" diaginertia="1.4342e-06 1.3576200000000001e-06 3.1251500000000002e-07"/>
+      <joint name="left_hand_v1_2_research_thumb_knuckle_joint" class="/" pos="0 0 0" axis="0 0 1" actuatorfrcrange="-30 30" damping="0.029999999999999999"/>
+      <geom name="//unnamed_geom_2" class="/" type="mesh" contype="1" conaffinity="2" group="1" rgba="0.34999999999999998 0.34999999999999998 0.34999999999999998 1" density="0" mesh="ph_thumb"/>
+      <body name="left_hand_v1_2_research_thumb_proximal_virtual_link" pos="0.025499999999999998 0.0038 -0.00012" quat="0.54030199999999995 -0.84147099999999997 0 0">
+        <inertial pos="0 0 0" quat="0.0365143 0.70616299999999999 -0.0365143 0.70616299999999999" mass="0.0063" diaginertia="2.6915e-07 2.3575999999999999e-07 1.7964499999999999e-07"/>
+        <joint name="left_hand_v1_2_research_thumb_proximal_virtual_joint" class="/" pos="0 0 0" axis="0 0 -1" actuatorfrcrange="-30 30" damping="0.029999999999999999"/>
+        <body name="left_hand_v1_2_research_thumb_proximal_link" pos="0.012999999999999999 0 0">
+          <inertial pos="0.0047601600000000003 -0.0013786899999999999 0" quat="0.0365143 0.70616299999999999 -0.0365143 0.70616299999999999" mass="0.0063" diaginertia="2.6915e-07 2.3575999999999999e-07 1.7964499999999999e-07"/>
+          <joint name="left_hand_v1_2_research_thumb_proximal_joint" class="/" pos="0 0 0" axis="0 0 -1" actuatorfrcrange="-30 30" damping="0.029999999999999999"/>
+          <geom name="//unnamed_geom_3" class="/" type="mesh" contype="1" conaffinity="2" group="1" rgba="0.34999999999999998 0.34999999999999998 0.34999999999999998 1" density="0" mesh="ph_short"/>
+          <body name="left_hand_v1_2_research_thumb_distal_virtual_link" pos="0.0089999999999999993 0 0">
+            <inertial pos="0 0 0" quat="0.0131386 0.70698499999999997 -0.0131386 0.70698499999999997" mass="0.0089999999999999993" diaginertia="6.6782000000000001e-07 5.9981899999999995e-07 2.6539999999999998e-07"/>
+            <joint name="left_hand_v1_2_research_thumb_distal_virtual_joint" class="/" pos="0 0 0" axis="0 0 -1" actuatorfrcrange="-30 30" damping="0.029999999999999999"/>
+            <body name="left_hand_v1_2_research_thumb_distal_link" pos="0.012999999999999999 0 0">
+              <inertial pos="0.0088025499999999993 -0.00172193 0" quat="0.0131386 0.70698499999999997 -0.0131386 0.70698499999999997" mass="0.0089999999999999993" diaginertia="6.6782000000000001e-07 5.9981899999999995e-07 2.6539999999999998e-07"/>
+              <joint name="left_hand_v1_2_research_thumb_distal_joint" class="/" pos="0 0 0" axis="0 0 -1" actuatorfrcrange="-30 30" damping="0.029999999999999999"/>
+              <geom name="//unnamed_geom_4" class="/" type="mesh" contype="1" conaffinity="2" group="1" rgba="0.34999999999999998 0.34999999999999998 0.34999999999999998 1" density="0" mesh="ph_distal"/>
+            </body>
+          </body>
+        </body>
+      </body>
+    </body>
+    <body name="left_hand_v1_2_research_index_knuckle_link" pos="0.00049323599999999998 -0.22447700000000001 0.15698899999999999" quat="-0.70626100000000003 4.48223e-07 0.707951 0.00056286400000000005">
+      <inertial pos="0.00042753600000000001 0 -0.00143217" quat="0.58716400000000002 0.39400299999999999 0.39400299999999999 0.58716400000000002" mass="0.0094999999999999998" diaginertia="1.1253799999999999e-06 7.3949800000000002e-07 6.2724499999999998e-07"/>
+      <joint name="left_hand_v1_2_research_index_knuckle_joint" class="/" pos="0 0 0" axis="0 0 -1" actuatorfrcrange="-30 30" damping="0.029999999999999999"/>
+      <geom name="//unnamed_geom_5" class="/" type="mesh" contype="1" conaffinity="2" group="1" rgba="0.34999999999999998 0.34999999999999998 0.34999999999999998 1" density="0" mesh="ph_knuckle"/>
+      <body name="left_hand_v1_2_research_index_proximal_virtual_link" pos="0.0089999999999999993 0 0" quat="0.70738800000000002 0.70682500000000004 0 0">
+        <inertial pos="0 0 0" quat="0.012308299999999999 0.70699999999999996 -0.012308299999999999 0.70699999999999996" mass="0.0089999999999999993" diaginertia="5.9562200000000004e-07 5.59876e-07 2.2681700000000001e-07"/>
+        <joint name="left_hand_v1_2_research_index_proximal_virtual_joint" class="/" pos="0 0 0" axis="0 0 -1" actuatorfrcrange="-30 30" damping="0.029999999999999999"/>
+        <body name="left_hand_v1_2_research_index_proximal_link" pos="0.012999999999999999 0 0">
+          <inertial pos="0.0087707400000000008 -0.0017863099999999999 0" quat="0.012308299999999999 0.70699999999999996 -0.012308299999999999 0.70699999999999996" mass="0.0089999999999999993" diaginertia="5.9562200000000004e-07 5.59876e-07 2.2681700000000001e-07"/>
+          <joint name="left_hand_v1_2_research_index_proximal_joint" class="/" pos="0 0 0" axis="0 0 -1" actuatorfrcrange="-30 30" damping="0.029999999999999999"/>
+          <geom name="//unnamed_geom_6" class="/" type="mesh" contype="1" conaffinity="2" group="1" rgba="0.34999999999999998 0.34999999999999998 0.34999999999999998 1" density="0" mesh="ph_medium"/>
+          <body name="left_hand_v1_2_research_index_middle_virtual_link" pos="0.012999999999999999 0 0">
+            <inertial pos="0 0 0" quat="0.0365143 0.70616299999999999 -0.0365143 0.70616299999999999" mass="0.0063" diaginertia="2.6915e-07 2.3575999999999999e-07 1.7964499999999999e-07"/>
+            <joint name="left_hand_v1_2_research_index_middle_virtual_joint" class="/" pos="0 0 0" axis="0 0 -1" actuatorfrcrange="-30 30" damping="0.029999999999999999"/>
+            <body name="left_hand_v1_2_research_index_middle_link" pos="0.017000000000000001 0 0">
+              <inertial pos="0.0047601600000000003 -0.0013786899999999999 0" quat="0.0365143 0.70616299999999999 -0.0365143 0.70616299999999999" mass="0.0063" diaginertia="2.6915e-07 2.3575999999999999e-07 1.7964499999999999e-07"/>
+              <joint name="left_hand_v1_2_research_index_middle_joint" class="/" pos="0 0 0" axis="0 0 -1" actuatorfrcrange="-30 30" damping="0.029999999999999999"/>
+              <geom name="//unnamed_geom_7" class="/" type="mesh" contype="1" conaffinity="2" group="1" rgba="0.34999999999999998 0.34999999999999998 0.34999999999999998 1" density="0" mesh="ph_short"/>
+              <body name="left_hand_v1_2_research_index_distal_virtual_link" pos="0.0089999999999999993 0 0">
+                <inertial pos="0 0 0" quat="0.0131386 0.70698499999999997 -0.0131386 0.70698499999999997" mass="0.0089999999999999993" diaginertia="6.6782000000000001e-07 5.9981899999999995e-07 2.6539999999999998e-07"/>
+                <joint name="left_hand_v1_2_research_index_distal_virtual_joint" class="/" pos="0 0 0" axis="0 0 -1" actuatorfrcrange="-30 30" damping="0.029999999999999999"/>
+                <body name="left_hand_v1_2_research_index_distal_link" pos="0.012999999999999999 0 0">
+                  <inertial pos="0.0088025499999999993 -0.00172193 0" quat="0.0131386 0.70698499999999997 -0.0131386 0.70698499999999997" mass="0.0089999999999999993" diaginertia="6.6782000000000001e-07 5.9981899999999995e-07 2.6539999999999998e-07"/>
+                  <joint name="left_hand_v1_2_research_index_distal_joint" class="/" pos="0 0 0" axis="0 0 -1" actuatorfrcrange="-30 30" damping="0.029999999999999999"/>
+                  <geom name="//unnamed_geom_8" class="/" type="mesh" contype="1" conaffinity="2" group="1" rgba="0.34999999999999998 0.34999999999999998 0.34999999999999998 1" density="0" mesh="ph_distal"/>
+                </body>
+              </body>
+            </body>
+          </body>
+        </body>
+      </body>
+    </body>
+    <body name="left_hand_v1_2_research_middle_knuckle_link" pos="0.00050358800000000002 -0.20447699999999999 0.163989" quat="-0.70626100000000003 4.48223e-07 0.707951 0.00056286400000000005">
+      <inertial pos="0.00042753600000000001 0 -0.00143217" quat="0.58716400000000002 0.39400299999999999 0.39400299999999999 0.58716400000000002" mass="0.0094999999999999998" diaginertia="1.1253799999999999e-06 7.3949800000000002e-07 6.2724499999999998e-07"/>
+      <joint name="left_hand_v1_2_research_middle_knuckle_joint" class="/" pos="0 0 0" axis="0 0 -1" actuatorfrcrange="-30 30" damping="0.029999999999999999"/>
+      <geom name="//unnamed_geom_9" class="/" type="mesh" contype="1" conaffinity="2" group="1" rgba="0.34999999999999998 0.34999999999999998 0.34999999999999998 1" density="0" mesh="ph_knuckle"/>
+      <body name="left_hand_v1_2_research_middle_proximal_virtual_link" pos="0.0089999999999999993 0 0" quat="0.70738800000000002 0.70682500000000004 0 0">
+        <inertial pos="0 0 0" quat="0.012308299999999999 0.70699999999999996 -0.012308299999999999 0.70699999999999996" mass="0.0089999999999999993" diaginertia="5.9562200000000004e-07 5.59876e-07 2.2681700000000001e-07"/>
+        <joint name="left_hand_v1_2_research_middle_proximal_virtual_joint" class="/" pos="0 0 0" axis="0 0 -1" actuatorfrcrange="-30 30" damping="0.029999999999999999"/>
+        <body name="left_hand_v1_2_research_middle_proximal_link" pos="0.012999999999999999 0 0">
+          <inertial pos="0.0087707400000000008 -0.0017863099999999999 0" quat="0.012308299999999999 0.70699999999999996 -0.012308299999999999 0.70699999999999996" mass="0.0089999999999999993" diaginertia="5.9562200000000004e-07 5.59876e-07 2.2681700000000001e-07"/>
+          <joint name="left_hand_v1_2_research_middle_proximal_joint" class="/" pos="0 0 0" axis="0 0 -1" actuatorfrcrange="-30 30" damping="0.029999999999999999"/>
+          <geom name="//unnamed_geom_10" class="/" type="mesh" contype="1" conaffinity="2" group="1" rgba="0.34999999999999998 0.34999999999999998 0.34999999999999998 1" density="0" mesh="ph_medium"/>
+          <body name="left_hand_v1_2_research_middle_middle_virtual_link" pos="0.012999999999999999 0 0">
+            <inertial pos="0 0 0" quat="0.0365143 0.70616299999999999 -0.0365143 0.70616299999999999" mass="0.0063" diaginertia="2.6915e-07 2.3575999999999999e-07 1.7964499999999999e-07"/>
+            <joint name="left_hand_v1_2_research_middle_middle_virtual_joint" class="/" pos="0 0 0" axis="0 0 -1" actuatorfrcrange="-30 30" damping="0.029999999999999999"/>
+            <body name="left_hand_v1_2_research_middle_middle_link" pos="0.017000000000000001 0 0">
+              <inertial pos="0.0047601600000000003 -0.0013786899999999999 0" quat="0.0365143 0.70616299999999999 -0.0365143 0.70616299999999999" mass="0.0063" diaginertia="2.6915e-07 2.3575999999999999e-07 1.7964499999999999e-07"/>
+              <joint name="left_hand_v1_2_research_middle_middle_joint" class="/" pos="0 0 0" axis="0 0 -1" actuatorfrcrange="-30 30" damping="0.029999999999999999"/>
+              <geom name="//unnamed_geom_11" class="/" type="mesh" contype="1" conaffinity="2" group="1" rgba="0.34999999999999998 0.34999999999999998 0.34999999999999998 1" density="0" mesh="ph_short"/>
+              <body name="left_hand_v1_2_research_middle_distal_virtual_link" pos="0.0089999999999999993 0 0">
+                <inertial pos="0 0 0" quat="0.0131386 0.70698499999999997 -0.0131386 0.70698499999999997" mass="0.0089999999999999993" diaginertia="6.6782000000000001e-07 5.9981899999999995e-07 2.6539999999999998e-07"/>
+                <joint name="left_hand_v1_2_research_middle_distal_virtual_joint" class="/" pos="0 0 0" axis="0 0 -1" actuatorfrcrange="-30 30" damping="0.029999999999999999"/>
+                <body name="left_hand_v1_2_research_middle_distal_link" pos="0.012999999999999999 0 0">
+                  <inertial pos="0.0088025499999999993 -0.00172193 0" quat="0.0131386 0.70698499999999997 -0.0131386 0.70698499999999997" mass="0.0089999999999999993" diaginertia="6.6782000000000001e-07 5.9981899999999995e-07 2.6539999999999998e-07"/>
+                  <joint name="left_hand_v1_2_research_middle_distal_joint" class="/" pos="0 0 0" axis="0 0 -1" actuatorfrcrange="-30 30" damping="0.029999999999999999"/>
+                  <geom name="//unnamed_geom_12" class="/" type="mesh" contype="1" conaffinity="2" group="1" rgba="0.34999999999999998 0.34999999999999998 0.34999999999999998 1" density="0" mesh="ph_distal"/>
+                </body>
+              </body>
+            </body>
+          </body>
+        </body>
+      </body>
+    </body>
+    <body name="left_hand_v1_2_research_ring_knuckle_link" pos="0.00052508899999999996 -0.184477 0.15698899999999999" quat="-0.70626100000000003 4.48223e-07 0.707951 0.00056286400000000005">
+      <inertial pos="0.00042753600000000001 0 -0.00143217" quat="0.58716400000000002 0.39400299999999999 0.39400299999999999 0.58716400000000002" mass="0.0094999999999999998" diaginertia="1.1253799999999999e-06 7.3949800000000002e-07 6.2724499999999998e-07"/>
+      <joint name="left_hand_v1_2_research_ring_knuckle_joint" class="/" pos="0 0 0" axis="0 0 -1" actuatorfrcrange="-30 30" damping="0.029999999999999999"/>
+      <geom name="//unnamed_geom_13" class="/" type="mesh" contype="1" conaffinity="2" group="1" rgba="0.34999999999999998 0.34999999999999998 0.34999999999999998 1" density="0" mesh="ph_knuckle"/>
+      <body name="left_hand_v1_2_research_ring_proximal_virtual_link" pos="0.0089999999999999993 0 0" quat="0.70738800000000002 0.70682500000000004 0 0">
+        <inertial pos="0 0 0" quat="0.012308299999999999 0.70699999999999996 -0.012308299999999999 0.70699999999999996" mass="0.0089999999999999993" diaginertia="5.9562200000000004e-07 5.59876e-07 2.2681700000000001e-07"/>
+        <joint name="left_hand_v1_2_research_ring_proximal_virtual_joint" class="/" pos="0 0 0" axis="0 0 -1" actuatorfrcrange="-30 30" damping="0.029999999999999999"/>
+        <body name="left_hand_v1_2_research_ring_proximal_link" pos="0.012999999999999999 0 0">
+          <inertial pos="0.0087707400000000008 -0.0017863099999999999 0" quat="0.012308299999999999 0.70699999999999996 -0.012308299999999999 0.70699999999999996" mass="0.0089999999999999993" diaginertia="5.9562200000000004e-07 5.59876e-07 2.2681700000000001e-07"/>
+          <joint name="left_hand_v1_2_research_ring_proximal_joint" class="/" pos="0 0 0" axis="0 0 -1" actuatorfrcrange="-30 30" damping="0.029999999999999999"/>
+          <geom name="//unnamed_geom_14" class="/" type="mesh" contype="1" conaffinity="2" group="1" rgba="0.34999999999999998 0.34999999999999998 0.34999999999999998 1" density="0" mesh="ph_medium"/>
+          <body name="left_hand_v1_2_research_ring_middle_virtual_link" pos="0.012999999999999999 0 0">
+            <inertial pos="0 0 0" quat="0.0365143 0.70616299999999999 -0.0365143 0.70616299999999999" mass="0.0063" diaginertia="2.6915e-07 2.3575999999999999e-07 1.7964499999999999e-07"/>
+            <joint name="left_hand_v1_2_research_ring_middle_virtual_joint" class="/" pos="0 0 0" axis="0 0 -1" actuatorfrcrange="-30 30" damping="0.029999999999999999"/>
+            <body name="left_hand_v1_2_research_ring_middle_link" pos="0.017000000000000001 0 0">
+              <inertial pos="0.0047601600000000003 -0.0013786899999999999 0" quat="0.0365143 0.70616299999999999 -0.0365143 0.70616299999999999" mass="0.0063" diaginertia="2.6915e-07 2.3575999999999999e-07 1.7964499999999999e-07"/>
+              <joint name="left_hand_v1_2_research_ring_middle_joint" class="/" pos="0 0 0" axis="0 0 -1" actuatorfrcrange="-30 30" damping="0.029999999999999999"/>
+              <geom name="//unnamed_geom_15" class="/" type="mesh" contype="1" conaffinity="2" group="1" rgba="0.34999999999999998 0.34999999999999998 0.34999999999999998 1" density="0" mesh="ph_short"/>
+              <body name="left_hand_v1_2_research_ring_distal_virtual_link" pos="0.0089999999999999993 0 0">
+                <inertial pos="0 0 0" quat="0.0131386 0.70698499999999997 -0.0131386 0.70698499999999997" mass="0.0089999999999999993" diaginertia="6.6782000000000001e-07 5.9981899999999995e-07 2.6539999999999998e-07"/>
+                <joint name="left_hand_v1_2_research_ring_distal_virtual_joint" class="/" pos="0 0 0" axis="0 0 -1" actuatorfrcrange="-30 30" damping="0.029999999999999999"/>
+                <body name="left_hand_v1_2_research_ring_distal_link" pos="0.012999999999999999 0 0">
+                  <inertial pos="0.0088025499999999993 -0.00172193 0" quat="0.0131386 0.70698499999999997 -0.0131386 0.70698499999999997" mass="0.0089999999999999993" diaginertia="6.6782000000000001e-07 5.9981899999999995e-07 2.6539999999999998e-07"/>
+                  <joint name="left_hand_v1_2_research_ring_distal_joint" class="/" pos="0 0 0" axis="0 0 -1" actuatorfrcrange="-30 30" damping="0.029999999999999999"/>
+                  <geom name="//unnamed_geom_16" class="/" type="mesh" contype="1" conaffinity="2" group="1" rgba="0.34999999999999998 0.34999999999999998 0.34999999999999998 1" density="0" mesh="ph_distal"/>
+                </body>
+              </body>
+            </body>
+          </body>
+        </body>
+      </body>
+    </body>
+    <body name="left_hand_v1_2_research_little_knuckle_link" pos="0.00054499699999999997 -0.16447700000000001 0.15198900000000001" quat="-0.70626100000000003 4.48223e-07 0.707951 0.00056286400000000005">
+      <inertial pos="0.00042753600000000001 0 -0.00143217" quat="0.58716400000000002 0.39400299999999999 0.39400299999999999 0.58716400000000002" mass="0.0094999999999999998" diaginertia="1.1253799999999999e-06 7.3949800000000002e-07 6.2724499999999998e-07"/>
+      <joint name="left_hand_v1_2_research_little_knuckle_joint" class="/" pos="0 0 0" axis="0 0 -1" actuatorfrcrange="-30 30" damping="0.029999999999999999"/>
+      <geom name="//unnamed_geom_17" class="/" type="mesh" contype="1" conaffinity="2" group="1" rgba="0.34999999999999998 0.34999999999999998 0.34999999999999998 1" density="0" mesh="ph_knuckle"/>
+      <body name="left_hand_v1_2_research_little_proximal_virtual_link" pos="0.0089999999999999993 0 0" quat="0.70738800000000002 0.70682500000000004 0 0">
+        <inertial pos="0 0 0" quat="0.012308299999999999 0.70699999999999996 -0.012308299999999999 0.70699999999999996" mass="0.0089999999999999993" diaginertia="5.9562200000000004e-07 5.59876e-07 2.2681700000000001e-07"/>
+        <joint name="left_hand_v1_2_research_little_proximal_virtual_joint" class="/" pos="0 0 0" axis="0 0 -1" actuatorfrcrange="-30 30" damping="0.029999999999999999"/>
+        <body name="left_hand_v1_2_research_little_proximal_link" pos="0.012999999999999999 0 0">
+          <inertial pos="0.0087707400000000008 -0.0017863099999999999 0" quat="0.012308299999999999 0.70699999999999996 -0.012308299999999999 0.70699999999999996" mass="0.0089999999999999993" diaginertia="5.9562200000000004e-07 5.59876e-07 2.2681700000000001e-07"/>
+          <joint name="left_hand_v1_2_research_little_proximal_joint" class="/" pos="0 0 0" axis="0 0 -1" actuatorfrcrange="-30 30" damping="0.029999999999999999"/>
+          <geom name="//unnamed_geom_18" class="/" type="mesh" contype="1" conaffinity="2" group="1" rgba="0.34999999999999998 0.34999999999999998 0.34999999999999998 1" density="0" mesh="ph_medium"/>
+          <body name="left_hand_v1_2_research_little_middle_virtual_link" pos="0.012999999999999999 0 0">
+            <inertial pos="0 0 0" quat="0.0365143 0.70616299999999999 -0.0365143 0.70616299999999999" mass="0.0063" diaginertia="2.6915e-07 2.3575999999999999e-07 1.7964499999999999e-07"/>
+            <joint name="left_hand_v1_2_research_little_middle_virtual_joint" class="/" pos="0 0 0" axis="0 0 -1" actuatorfrcrange="-30 30" damping="0.029999999999999999"/>
+            <body name="left_hand_v1_2_research_little_middle_link" pos="0.017000000000000001 0 0">
+              <inertial pos="0.0047601600000000003 -0.0013786899999999999 0" quat="0.0365143 0.70616299999999999 -0.0365143 0.70616299999999999" mass="0.0063" diaginertia="2.6915e-07 2.3575999999999999e-07 1.7964499999999999e-07"/>
+              <joint name="left_hand_v1_2_research_little_middle_joint" class="/" pos="0 0 0" axis="0 0 -1" actuatorfrcrange="-30 30" damping="0.029999999999999999"/>
+              <geom name="//unnamed_geom_19" class="/" type="mesh" contype="1" conaffinity="2" group="1" rgba="0.34999999999999998 0.34999999999999998 0.34999999999999998 1" density="0" mesh="ph_short"/>
+              <body name="left_hand_v1_2_research_little_distal_virtual_link" pos="0.0089999999999999993 0 0">
+                <inertial pos="0 0 0" quat="0.0131386 0.70698499999999997 -0.0131386 0.70698499999999997" mass="0.0089999999999999993" diaginertia="6.6782000000000001e-07 5.9981899999999995e-07 2.6539999999999998e-07"/>
+                <joint name="left_hand_v1_2_research_little_distal_virtual_joint" class="/" pos="0 0 0" axis="0 0 -1" actuatorfrcrange="-30 30" damping="0.029999999999999999"/>
+                <body name="left_hand_v1_2_research_little_distal_link" pos="0.012999999999999999 0 0">
+                  <inertial pos="0.0088025499999999993 -0.00172193 0" quat="0.0131386 0.70698499999999997 -0.0131386 0.70698499999999997" mass="0.0089999999999999993" diaginertia="6.6782000000000001e-07 5.9981899999999995e-07 2.6539999999999998e-07"/>
+                  <joint name="left_hand_v1_2_research_little_distal_joint" class="/" pos="0 0 0" axis="0 0 -1" actuatorfrcrange="-30 30" damping="0.029999999999999999"/>
+                  <geom name="//unnamed_geom_20" class="/" type="mesh" contype="1" conaffinity="2" group="1" rgba="0.34999999999999998 0.34999999999999998 0.34999999999999998 1" density="0" mesh="ph_distal"/>
+                </body>
+              </body>
+            </body>
+          </body>
+        </body>
+      </body>
+    </body>
+  </worldbody>
+  <equality>
+    <joint name="left_hand_v1_2_research_thumb_proximal_joint_eq_left_hand_v1_2_research_thumb_proximal_virtual_joint" class="/" joint1="left_hand_v1_2_research_thumb_proximal_joint" joint2="left_hand_v1_2_research_thumb_proximal_virtual_joint"/>
+    <joint name="left_hand_v1_2_research_thumb_distal_joint_eq_left_hand_v1_2_research_thumb_distal_virtual_joint" class="/" joint1="left_hand_v1_2_research_thumb_distal_joint" joint2="left_hand_v1_2_research_thumb_distal_virtual_joint"/>
+    <joint name="left_hand_v1_2_research_index_proximal_joint_eq_left_hand_v1_2_research_index_proximal_virtual_joint" class="/" joint1="left_hand_v1_2_research_index_proximal_joint" joint2="left_hand_v1_2_research_index_proximal_virtual_joint"/>
+    <joint name="left_hand_v1_2_research_index_middle_joint_eq_left_hand_v1_2_research_index_middle_virtual_joint" class="/" joint1="left_hand_v1_2_research_index_middle_joint" joint2="left_hand_v1_2_research_index_middle_virtual_joint"/>
+    <joint name="left_hand_v1_2_research_index_distal_joint_eq_left_hand_v1_2_research_index_distal_virtual_joint" class="/" joint1="left_hand_v1_2_research_index_distal_joint" joint2="left_hand_v1_2_research_index_distal_virtual_joint"/>
+    <joint name="left_hand_v1_2_research_middle_proximal_joint_eq_left_hand_v1_2_research_middle_proximal_virtual_joint" class="/" joint1="left_hand_v1_2_research_middle_proximal_joint" joint2="left_hand_v1_2_research_middle_proximal_virtual_joint"/>
+    <joint name="left_hand_v1_2_research_middle_middle_joint_eq_left_hand_v1_2_research_middle_middle_virtual_joint" class="/" joint1="left_hand_v1_2_research_middle_middle_joint" joint2="left_hand_v1_2_research_middle_middle_virtual_joint"/>
+    <joint name="left_hand_v1_2_research_middle_distal_joint_eq_left_hand_v1_2_research_middle_distal_virtual_joint" class="/" joint1="left_hand_v1_2_research_middle_distal_joint" joint2="left_hand_v1_2_research_middle_distal_virtual_joint"/>
+    <joint name="left_hand_v1_2_research_ring_proximal_joint_eq_left_hand_v1_2_research_ring_proximal_virtual_joint" class="/" joint1="left_hand_v1_2_research_ring_proximal_joint" joint2="left_hand_v1_2_research_ring_proximal_virtual_joint"/>
+    <joint name="left_hand_v1_2_research_ring_middle_joint_eq_left_hand_v1_2_research_ring_middle_virtual_joint" class="/" joint1="left_hand_v1_2_research_ring_middle_joint" joint2="left_hand_v1_2_research_ring_middle_virtual_joint"/>
+    <joint name="left_hand_v1_2_research_ring_distal_joint_eq_left_hand_v1_2_research_ring_distal_virtual_joint" class="/" joint1="left_hand_v1_2_research_ring_distal_joint" joint2="left_hand_v1_2_research_ring_distal_virtual_joint"/>
+    <joint name="left_hand_v1_2_research_little_proximal_joint_eq_left_hand_v1_2_research_little_proximal_virtual_joint" class="/" joint1="left_hand_v1_2_research_little_proximal_joint" joint2="left_hand_v1_2_research_little_proximal_virtual_joint"/>
+    <joint name="left_hand_v1_2_research_little_middle_joint_eq_left_hand_v1_2_research_little_middle_virtual_joint" class="/" joint1="left_hand_v1_2_research_little_middle_joint" joint2="left_hand_v1_2_research_little_middle_virtual_joint"/>
+    <joint name="left_hand_v1_2_research_little_distal_joint_eq_left_hand_v1_2_research_little_distal_virtual_joint" class="/" joint1="left_hand_v1_2_research_little_distal_joint" joint2="left_hand_v1_2_research_little_distal_virtual_joint"/>
+  </equality>
+</mujoco>
