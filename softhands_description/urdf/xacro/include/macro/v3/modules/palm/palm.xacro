@@ -30,22 +30,51 @@
  * OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
  * OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  *
- * \file      test_SHs_v2.urdf.xacro
+ * \file      sh_v1_simple.xacro
  *
  * \author       _Centro di Ricerca "E.Piaggio"_
  * \author       _Istituto Italiano di Tecnologia, Soft Robotics for Human Cooperation and Rehabilitation Lab_
  *
 -->
 
-<robot name="softhand" xmlns:xacro="http://www.ros.org/wiki/xacro">
-  	<xacro:arg name="sh_version" default="v1_2_research"/>
-	
-    <xacro:include filename="$(find softhands_description)/urdf/softhands.xacro"/>
-    <xacro:softhands 
-        version="$(arg sh_version)"
-        position="0 0 0" 
-        orientation="1.57 0 0" 
-        fixed_hands="false">
-    </xacro:softhands>
+<robot name="palm_v3" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+	<xacro:macro name="palm" params="ns name parent *origin">
+		
+
+
+	  	<joint name="${ns}_palm_joint" type="fixed">
+			<xacro:insert_block name="origin"/>
+			<parent link="${parent}" />
+			<child link="${ns}_palm_link" />
+		</joint>
+
+		<link name="${ns}_palm_link">
+			<inertial>
+				<origin rpy="0 0 0" xyz="0.005 -4.037e-2 ${sign*1.214e-2}"/>
+				<mass value="2.27e-1"/>
+				<inertia ixx="1.14e-4" ixy="4.47e-6" ixz="-3.04e-6" iyy="7e-5" iyz="2.87e-6" izz="1.608e-4"/>
+			</inertial>
+			<visual>
+			<origin rpy="0 0 0" xyz="0 0 0"/>
+			<geometry>
+				<mesh filename="package://softhands_description/meshes/v3/${side}/palm_pinch.stl" scale="0.001 0.001 0.001"/>
+			</geometry>
+			<material name="qbhand/palm"/>
+			</visual>
+			<collision>
+				<origin rpy="0 0 0" xyz="0 0 0"/>
+				<geometry>
+					<mesh filename="package://softhands_description/meshes/v3/${side}/palm_pinch_collision.stl" scale="0.001 0.001 0.001"/>
+				</geometry>
+			</collision>
+		</link>
+
+
+		<gazebo reference="${ns}_palm_link">
+			<material>Gazebo/Grey</material>
+			<selfCollide>0</selfCollide>
+		</gazebo>
+	</xacro:macro>
 
 </robot>

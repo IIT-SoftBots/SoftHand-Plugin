@@ -30,22 +30,50 @@
  * OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
  * OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  *
- * \file      test_SHs_v2.urdf.xacro
+ * \file      sh_v1_simple.xacro
  *
  * \author       _Centro di Ricerca "E.Piaggio"_
  * \author       _Istituto Italiano di Tecnologia, Soft Robotics for Human Cooperation and Rehabilitation Lab_
  *
 -->
 
-<robot name="softhand" xmlns:xacro="http://www.ros.org/wiki/xacro">
-  	<xacro:arg name="sh_version" default="v1_2_research"/>
-	
-    <xacro:include filename="$(find softhands_description)/urdf/softhands.xacro"/>
-    <xacro:softhands 
-        version="$(arg sh_version)"
-        position="0 0 0" 
-        orientation="1.57 0 0" 
-        fixed_hands="false">
-    </xacro:softhands>
+<robot name="iso_v3" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+	<xacro:macro name="iso" params="ns name parent *origin">
+		
+		<!-- World to palm base -->
+		<joint name="${ns}_${name}_joint" type="fixed">
+			<parent link="${parent}"/>
+			<child link="${ns}_${name}_link"/>
+			<xacro:insert_block name="origin"/>
+		</joint>
+		<link name="${ns}_${name}_link">
+			<inertial>
+				<mass value="0.205"/>
+				<origin rpy="0 0 0" xyz="0.0 7.8738498e-04 1.5878899e-02"/>
+				<inertia ixx="0.00012506929" ixy="0.0" ixz="0.0" iyy="0.0001338779" iyz="0.0" izz="0.00019218394"/>
+			</inertial>
+			<visual>
+				<origin rpy="0 0 0" xyz="0 0 0"/>
+				<geometry>
+					<mesh filename="package://softhands_description/meshes/v3/${side}/flange_iso_04.stl" scale="0.001 0.001 0.001"/>
+				</geometry>
+				<material name="qbhand/base"/>
+			</visual>
+			<collision>
+			<origin rpy="0 0 0" xyz="0 0 0"/>
+			<geometry>
+				<mesh filename="package://softhands_description/meshes/v3/${side}/flange_iso_04.stl" scale="0.001 0.001 0.001"/>
+			</geometry>
+			</collision>
+		</link>
+
+		<gazebo reference="${ns}_${name}_link">
+    	  	<material>Gazebo/Grey</material>
+			<selfCollide>0</selfCollide>
+	  	</gazebo>
+
+		
+	</xacro:macro>
 
 </robot>
