@@ -502,7 +502,7 @@ def add_joint_stiffness_sole(hand_mjcf,
 ALL_OPERATIONS = (general_fixes,constraint_sole_rolling,add_joint_stiffness_sole)
 
 
-def build_hand(xml_path="/home/esguerri/SoftHand/src/SoftHand-Plugin/softhands_description/urdf/xml_for_mujoco/right_softhand_v1_2_research.xml", operations=ALL_OPERATIONS, **config):
+def build_hand(xml_path="/home/esguerri/SoftHand/src/SoftHand-Plugin/softhands_description/urdf/xml_for_mujoco/right_softhand_v3.xml", operations=ALL_OPERATIONS, **config):
     hand_mjcf = mjcf.from_path(xml_path)
     print("Sono qua")
     
@@ -512,14 +512,14 @@ def build_hand(xml_path="/home/esguerri/SoftHand/src/SoftHand-Plugin/softhands_d
     return hand_mjcf
 
 destination = "export/"
-model_name = "edited_right_softhand_v1_2_research"
+model_name = "right_softhand_v3_edited"
 
 def main():
     # hand_mjcf = build_hand(xml_path='/home/esguerri/SoftHand/src/SoftHand-Plugin/softhands_description/urdf/xml_for_mujoco/right_softhand_v1_2_research.xml', elastic_stiffness=0, joint_stiffness=0.5, elastic_range=[0.0, 0.04],
     #                              elastic_length=0.013, tendon_length=[0, 0.287], n_fingers=5, elastic_damping=70,
     #                              posterior_stiffness=0)
     
-    hand_mjcf = build_hand(xml_path='/home/esguerri/SoftHand/src/SoftHand-Plugin/softhands_description/urdf/xml_for_mujoco/right_softhand_v1_2_research.xml')
+    hand_mjcf = build_hand(xml_path='/home/esguerri/SoftHand/src/SoftHand-Plugin/softhands_description/urdf/xml_for_mujoco/right_softhand_v3.xml')
     model = mujoco.MjModel.from_xml_string(hand_mjcf.to_xml_string(), hand_mjcf.get_assets())
 
     viewer.launch(model)

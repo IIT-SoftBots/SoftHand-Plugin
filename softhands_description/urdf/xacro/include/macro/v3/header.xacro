@@ -30,22 +30,28 @@
  * OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
  * OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  *
- * \file      test_SHs_v2.urdf.xacro
+ * 
  *
  * \author       _Centro di Ricerca "E.Piaggio"_
  * \author       _Istituto Italiano di Tecnologia, Soft Robotics for Human Cooperation and Rehabilitation Lab_
  *
 -->
 
-<robot name="softhand" xmlns:xacro="http://www.ros.org/wiki/xacro">
-  	<xacro:arg name="sh_version" default="v3"/>
-	
-    <xacro:include filename="$(find softhands_description)/urdf/softhands.xacro"/>
-    <xacro:softhands 
-        version="$(arg sh_version)"
-        position="0 0 0" 
-        orientation="1.57 0 0" 
-        fixed_hands="false">
-    </xacro:softhands>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="header">
 
+  <!-- Include xacro macro  Palm-->
+	<xacro:include filename="$(find softhands_description)/urdf/xacro/include/macro/v3/modules/palm/palm.xacro" />
+	<xacro:include filename="$(find softhands_description)/urdf/xacro/include/macro/v3/modules/iso.xacro" />
+  <!-- Include xacro macro Thumb -->
+  <xacro:include filename="$(find softhands_description)/urdf/xacro/include/macro/v3/modules/thumb.xacro" />
+
+  <!-- Include xacro macro Finger -->
+  <xacro:include filename="$(find softhands_description)/urdf/xacro/include/macro/v3/modules/finger.xacro" />
+
+  <!-- Phalanges -->
+  <xacro:include filename="$(find softhands_description)/urdf/xacro/include/macro/v3/modules/phalanges/phalanx_generic.xacro" />
+  <xacro:include filename="$(find softhands_description)/urdf/xacro/include/macro/v3/modules/phalanges/phalanx_knuckle.xacro" />
+  <xacro:include filename="$(find softhands_description)/urdf/xacro/include/macro/v3/modules/phalanges/thumb_knuckle.xacro" />
+
+  
 </robot>
