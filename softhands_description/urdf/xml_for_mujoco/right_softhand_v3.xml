@@ -25,23 +25,23 @@
     <geom pos="0 0 0.2" quat="0.707388 0.706825 0 0" type="mesh" rgba="0.35 0.35 0.35 1" mesh="palm_pinch_collision"/>
     <body name="right_hand_v3_thumb_knuckle_link" pos="-0.0315281 0.00237798 0.172341" quat="0.000119734 0.300706 0.000379722 0.953717">
       <inertial pos="0.0073027 -0.00209743 -0.000192524" quat="-0.0471766 0.675929 -0.206651 0.705826" mass="0.00400276" diaginertia="2.72757e-07 2.72415e-07 6.89658e-08"/>
-      <joint name="right_hand_v3_thumb_knuckle_joint" pos="0 0 0" axis="0 0 -1" range="0 1.57" actuatorfrcrange="-30 30" damping="0.05" frictionloss="0.1"/>
+      <joint name="right_hand_v3_thumb_knuckle_joint" pos="0 0 0" axis="0 0 -1" range="0 1.57" actuatorfrcrange="-30 30" damping="0.03"/>
       <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.35 0.35 0.35 1" mesh="ph_thumb"/>
       <geom type="mesh" rgba="0.35 0.35 0.35 1" mesh="ph_thumb_collision"/>
       <body name="right_hand_v3_thumb_proximal_virtual_link" pos="0.0165 -0.0042 0" quat="0.707107 -0.707107 0 0">
         <inertial pos="0 0 0" quat="0.00438927 0.707093 -0.00438927 0.707093" mass="0.00344335" diaginertia="4.50437e-07 4.38553e-07 5.92007e-08"/>
-        <joint name="right_hand_v3_thumb_proximal_virtual_joint" pos="0 0 0" axis="0 0 -1" range="0 0.785398" actuatorfrcrange="-30 30" damping="0.05" frictionloss="0.1"/>
-        <body name="right_hand_v3_thumb_proximal_link" pos="0.01 0 0">
+        <joint name="right_hand_v3_thumb_proximal_virtual_joint" pos="0 0 0" axis="0 0 -1" range="0 0.785398" actuatorfrcrange="-30 30" damping="0.03"/>
+        <body name="right_hand_v3_thumb_proximal_link" pos="0.009 0 0">
           <inertial pos="0.00829589 0.000148677 0" quat="0.00438927 0.707093 -0.00438927 0.707093" mass="0.00344335" diaginertia="4.50437e-07 4.38553e-07 5.92007e-08"/>
-          <joint name="right_hand_v3_thumb_proximal_joint" pos="0 0 0" axis="0 0 -1" range="0 0.785398" actuatorfrcrange="-30 30" damping="0.05" frictionloss="0.1"/>
+          <joint name="right_hand_v3_thumb_proximal_joint" pos="0 0 0" axis="0 0 -1" range="0 0.785398" actuatorfrcrange="-30 30" damping="0.03"/>
           <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.35 0.35 0.35 1" mesh="ph_proximal"/>
           <geom type="mesh" rgba="0.35 0.35 0.35 1" mesh="ph_proximal_collision"/>
           <body name="right_hand_v3_thumb_distal_virtual_link" pos="0.016 0 0">
-            <inertial pos="0 0 0" quat="0.499286 0.509835 0.492245 0.498473" mass="0.00240347" diaginertia="6.16595e-08 5.8551e-08 2.94763e-08"/>
-            <joint name="right_hand_v3_thumb_distal_virtual_joint" pos="0 0 0" axis="0 0 -1" range="0 0.785398" actuatorfrcrange="-30 30" damping="0.05" frictionloss="0.1"/>
-            <body name="right_hand_v3_thumb_distal_link" pos="0.01 0 0">
-              <inertial pos="0.00233796 0.000535801 -0.000450702" quat="0.499286 0.509835 0.492245 0.498473" mass="0.00240347" diaginertia="6.16595e-08 5.8551e-08 2.94763e-08"/>
-              <joint name="right_hand_v3_thumb_distal_joint" pos="0 0 0" axis="0 0 -1" range="0 0.785398" actuatorfrcrange="-30 30" damping="0.05" frictionloss="0.1"/>
+            <inertial pos="0 0 0" quat="0.0131386 0.706985 -0.0131386 0.706985" mass="0.009" diaginertia="6.6782e-07 5.99819e-07 2.654e-07"/>
+            <joint name="right_hand_v3_thumb_distal_virtual_joint" pos="0 0 0" axis="0 0 -1" range="0 0.785398" actuatorfrcrange="-30 30" damping="0.03"/>
+            <body name="right_hand_v3_thumb_distal_link" pos="0.009 0 0">
+              <inertial pos="0.00233796 0.000535801 -0.000450702" quat="0.0131386 0.706985 -0.0131386 0.706985" mass="0.009" diaginertia="6.6782e-07 5.99819e-07 2.654e-07"/>
+              <joint name="right_hand_v3_thumb_distal_joint" pos="0 0 0" axis="0 0 -1" range="0 0.785398" actuatorfrcrange="-30 30" damping="0.03"/>
               <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.35 0.35 0.35 1" mesh="ph_distal"/>
               <geom type="mesh" rgba="0.35 0.35 0.35 1" mesh="ph_distal_collision"/>
             </body>
@@ -51,31 +51,31 @@
     </body>
     <body name="right_hand_v3_index_knuckle_link" pos="-0.02 -0.0060267 0.200005" quat="0.4547 0.454338 -0.54146 0.541891">
       <inertial pos="0.00826725 -0.00274793 6.3742e-05" quat="0.0201937 0.700219 -0.120065 0.70347" mass="0.00295319" diaginertia="1.7177e-07 1.70069e-07 4.4208e-08"/>
-      <joint name="right_hand_v3_index_knuckle_joint" pos="0 0 0" axis="0 0 -1" range="-0.524 0.524" actuatorfrcrange="-30 30" damping="0.05" frictionloss="0.1"/>
+      <joint name="right_hand_v3_index_knuckle_joint" pos="0 0 0" axis="0 0 -1" range="-0.524 0.524" actuatorfrcrange="-30 30" damping="0.03"/>
       <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.35 0.35 0.35 1" mesh="ph_index_knuckle"/>
       <geom type="mesh" rgba="0.35 0.35 0.35 1" mesh="ph_index_knuckle_collision"/>
       <body name="right_hand_v3_index_proximal_virtual_link" pos="0.015 -0.0037 0" quat="0.707107 0.707107 0 0">
         <inertial pos="0 0 0" quat="0.00438927 0.707093 -0.00438927 0.707093" mass="0.00344335" diaginertia="4.50437e-07 4.38553e-07 5.92007e-08"/>
-        <joint name="right_hand_v3_index_proximal_virtual_joint" pos="0 0 0" axis="0 0 -1" range="0 0.785398" actuatorfrcrange="-30 30" damping="0.05" frictionloss="0.1"/>
-        <body name="right_hand_v3_index_proximal_link" pos="0.01 0 0">
+        <joint name="right_hand_v3_index_proximal_virtual_joint" pos="0 0 0" axis="0 0 -1" range="0 0.785398" actuatorfrcrange="-30 30" damping="0.03"/>
+        <body name="right_hand_v3_index_proximal_link" pos="0.009 0 0">
           <inertial pos="0.00829589 0.000148677 0" quat="0.00438927 0.707093 -0.00438927 0.707093" mass="0.00344335" diaginertia="4.50437e-07 4.38553e-07 5.92007e-08"/>
-          <joint name="right_hand_v3_index_proximal_joint" pos="0 0 0" axis="0 0 -1" range="0 0.785398" actuatorfrcrange="-30 30" damping="0.05" frictionloss="0.1"/>
+          <joint name="right_hand_v3_index_proximal_joint" pos="0 0 0" axis="0 0 -1" range="0 0.785398" actuatorfrcrange="-30 30" damping="0.03"/>
           <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.35 0.35 0.35 1" mesh="ph_proximal"/>
           <geom type="mesh" rgba="0.35 0.35 0.35 1" mesh="ph_proximal_collision"/>
           <body name="right_hand_v3_index_middle_virtual_link" pos="0.016 0 0">
             <inertial pos="0 0 0" quat="0.00438927 0.707093 -0.00438927 0.707093" mass="0.00344335" diaginertia="4.50437e-07 4.38553e-07 5.92007e-08"/>
-            <joint name="right_hand_v3_index_middle_virtual_joint" pos="0 0 0" axis="0 0 -1" range="0 0.785398" actuatorfrcrange="-30 30" damping="0.05" frictionloss="0.1"/>
-            <body name="right_hand_v3_index_middle_link" pos="0.01 0 0">
+            <joint name="right_hand_v3_index_middle_virtual_joint" pos="0 0 0" axis="0 0 -1" range="0 0.785398" actuatorfrcrange="-30 30" damping="0.03"/>
+            <body name="right_hand_v3_index_middle_link" pos="0.009 0 0">
               <inertial pos="0.00829589 0.000148677 0" quat="0.00438927 0.707093 -0.00438927 0.707093" mass="0.00344335" diaginertia="4.50437e-07 4.38553e-07 5.92007e-08"/>
-              <joint name="right_hand_v3_index_middle_joint" pos="0 0 0" axis="0 0 -1" range="0 0.785398" actuatorfrcrange="-30 30" damping="0.05" frictionloss="0.1"/>
+              <joint name="right_hand_v3_index_middle_joint" pos="0 0 0" axis="0 0 -1" range="0 0.785398" actuatorfrcrange="-30 30" damping="0.03"/>
               <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.35 0.35 0.35 1" mesh="ph_proximal"/>
               <geom type="mesh" rgba="0.35 0.35 0.35 1" mesh="ph_proximal_collision"/>
               <body name="right_hand_v3_index_distal_virtual_link" pos="0.016 0 0">
-                <inertial pos="0 0 0" quat="0.499286 0.509835 0.492245 0.498473" mass="0.00240347" diaginertia="6.16595e-08 5.8551e-08 2.94763e-08"/>
-                <joint name="right_hand_v3_index_distal_virtual_joint" pos="0 0 0" axis="0 0 -1" range="0 0.785398" actuatorfrcrange="-30 30" damping="0.05" frictionloss="0.1"/>
-                <body name="right_hand_v3_index_distal_link" pos="0.01 -3.4865e-07 0.0005">
-                  <inertial pos="0.00233796 0.000535801 -0.000450702" quat="0.499286 0.509835 0.492245 0.498473" mass="0.00240347" diaginertia="6.16595e-08 5.8551e-08 2.94763e-08"/>
-                  <joint name="right_hand_v3_index_distal_joint" pos="0 0 0" axis="0 0 -1" range="0 0.785398" actuatorfrcrange="-30 30" damping="0.05" frictionloss="0.1"/>
+                <inertial pos="0 0 0" quat="0.0131386 0.706985 -0.0131386 0.706985" mass="0.009" diaginertia="6.6782e-07 5.99819e-07 2.654e-07"/>
+                <joint name="right_hand_v3_index_distal_virtual_joint" pos="0 0 0" axis="0 0 -1" range="0 0.785398" actuatorfrcrange="-30 30" damping="0.03"/>
+                <body name="right_hand_v3_index_distal_link" pos="0.009 -3.4865e-07 0.0005">
+                  <inertial pos="0.00233796 0.000535801 -0.000450702" quat="0.0131386 0.706985 -0.0131386 0.706985" mass="0.009" diaginertia="6.6782e-07 5.99819e-07 2.654e-07"/>
+                  <joint name="right_hand_v3_index_distal_joint" pos="0 0 0" axis="0 0 -1" range="0 0.785398" actuatorfrcrange="-30 30" damping="0.03"/>
                   <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.35 0.35 0.35 1" mesh="ph_distal"/>
                   <geom type="mesh" rgba="0.35 0.35 0.35 1" mesh="ph_distal_collision"/>
                 </body>
@@ -87,31 +87,31 @@
     </body>
     <body name="right_hand_v3_middle_knuckle_link" pos="0 -0.0063 0.200005" quat="0.500199 0.499801 -0.499801 0.500199">
       <inertial pos="0.0080073 -0.000701689 -0.000220935" quat="0.00775845 0.710111 0.00782575 0.704004" mass="0.00316806" diaginertia="1.73752e-07 1.69587e-07 5.087e-08"/>
-      <joint name="right_hand_v3_middle_knuckle_joint" pos="0 0 0" axis="0 0 -1" range="-0.524 0.524" actuatorfrcrange="-30 30" damping="0.05" frictionloss="0.1"/>
+      <joint name="right_hand_v3_middle_knuckle_joint" pos="0 0 0" axis="0 0 -1" range="-0.524 0.524" actuatorfrcrange="-30 30" damping="0.03"/>
       <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.35 0.35 0.35 1" mesh="ph_middle_knuckle"/>
       <geom type="mesh" rgba="0.35 0.35 0.35 1" mesh="ph_middle_knuckle_collision"/>
       <body name="right_hand_v3_middle_proximal_virtual_link" pos="0.015 0 -0.000273297" quat="0.707107 0.707107 0 0">
         <inertial pos="0 0 0" quat="0.00349393 0.707098 -0.00349393 0.707098" mass="0.00463755" diaginertia="4.2601e-07 4.16619e-07 7.19489e-08"/>
-        <joint name="right_hand_v3_middle_proximal_virtual_joint" pos="0 0 0" axis="0 0 -1" range="0 0.785398" actuatorfrcrange="-30 30" damping="0.05" frictionloss="0.1"/>
-        <body name="right_hand_v3_middle_proximal_link" pos="0.01 0 0">
+        <joint name="right_hand_v3_middle_proximal_virtual_joint" pos="0 0 0" axis="0 0 -1" range="0 0.785398" actuatorfrcrange="-30 30" damping="0.03"/>
+        <body name="right_hand_v3_middle_proximal_link" pos="0.009 0 0">
           <inertial pos="0.00884921 0.000288383 0" quat="0.00349393 0.707098 -0.00349393 0.707098" mass="0.00463755" diaginertia="4.2601e-07 4.16619e-07 7.19489e-08"/>
-          <joint name="right_hand_v3_middle_proximal_joint" pos="0 0 0" axis="0 0 -1" range="0 0.785398" actuatorfrcrange="-30 30" damping="0.05" frictionloss="0.1"/>
+          <joint name="right_hand_v3_middle_proximal_joint" pos="0 0 0" axis="0 0 -1" range="0 0.785398" actuatorfrcrange="-30 30" damping="0.03"/>
           <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.35 0.35 0.35 1" mesh="ph_proximal_middle"/>
           <geom type="mesh" rgba="0.35 0.35 0.35 1" mesh="ph_proximal_middle_collision"/>
           <body name="right_hand_v3_middle_middle_virtual_link" pos="0.021 0 0">
             <inertial pos="0 0 0" quat="0.00349393 0.707098 -0.00349393 0.707098" mass="0.00463755" diaginertia="4.2601e-07 4.16619e-07 7.19489e-08"/>
-            <joint name="right_hand_v3_middle_middle_virtual_joint" pos="0 0 0" axis="0 0 -1" range="0 0.785398" actuatorfrcrange="-30 30" damping="0.05" frictionloss="0.1"/>
-            <body name="right_hand_v3_middle_middle_link" pos="0.01 0 0">
+            <joint name="right_hand_v3_middle_middle_virtual_joint" pos="0 0 0" axis="0 0 -1" range="0 0.785398" actuatorfrcrange="-30 30" damping="0.03"/>
+            <body name="right_hand_v3_middle_middle_link" pos="0.009 0 0">
               <inertial pos="0.00884921 0.000288383 0" quat="0.00349393 0.707098 -0.00349393 0.707098" mass="0.00463755" diaginertia="4.2601e-07 4.16619e-07 7.19489e-08"/>
-              <joint name="right_hand_v3_middle_middle_joint" pos="0 0 0" axis="0 0 -1" range="0 0.785398" actuatorfrcrange="-30 30" damping="0.05" frictionloss="0.1"/>
+              <joint name="right_hand_v3_middle_middle_joint" pos="0 0 0" axis="0 0 -1" range="0 0.785398" actuatorfrcrange="-30 30" damping="0.03"/>
               <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.35 0.35 0.35 1" mesh="ph_proximal_middle"/>
               <geom type="mesh" rgba="0.35 0.35 0.35 1" mesh="ph_proximal_middle_collision"/>
               <body name="right_hand_v3_middle_distal_virtual_link" pos="0.021 0 0">
-                <inertial pos="0 0 0" quat="0.499286 0.509835 0.492245 0.498473" mass="0.00240347" diaginertia="6.16595e-08 5.8551e-08 2.94763e-08"/>
-                <joint name="right_hand_v3_middle_distal_virtual_joint" pos="0 0 0" axis="0 0 -1" range="0 0.785398" actuatorfrcrange="-30 30" damping="0.05" frictionloss="0.1"/>
-                <body name="right_hand_v3_middle_distal_link" pos="0.01 -3.4865e-07 0.0005">
-                  <inertial pos="0.00233796 0.000535801 -0.000450702" quat="0.499286 0.509835 0.492245 0.498473" mass="0.00240347" diaginertia="6.16595e-08 5.8551e-08 2.94763e-08"/>
-                  <joint name="right_hand_v3_middle_distal_joint" pos="0 0 0" axis="0 0 -1" range="0 0.785398" actuatorfrcrange="-30 30" damping="0.05" frictionloss="0.1"/>
+                <inertial pos="0 0 0" quat="0.0131386 0.706985 -0.0131386 0.706985" mass="0.009" diaginertia="6.6782e-07 5.99819e-07 2.654e-07"/>
+                <joint name="right_hand_v3_middle_distal_virtual_joint" pos="0 0 0" axis="0 0 -1" range="0 0.785398" actuatorfrcrange="-30 30" damping="0.03"/>
+                <body name="right_hand_v3_middle_distal_link" pos="0.009 -3.4865e-07 0.0005">
+                  <inertial pos="0.00233796 0.000535801 -0.000450702" quat="0.0131386 0.706985 -0.0131386 0.706985" mass="0.009" diaginertia="6.6782e-07 5.99819e-07 2.654e-07"/>
+                  <joint name="right_hand_v3_middle_distal_joint" pos="0 0 0" axis="0 0 -1" range="0 0.785398" actuatorfrcrange="-30 30" damping="0.03"/>
                   <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.35 0.35 0.35 1" mesh="ph_distal"/>
                   <geom type="mesh" rgba="0.35 0.35 0.35 1" mesh="ph_distal_collision"/>
                 </body>
@@ -123,31 +123,31 @@
     </body>
     <body name="right_hand_v3_ring_knuckle_link" pos="0.02 -0.0060267 0.200005" quat="0.541891 0.541459 -0.454339 0.454701">
       <inertial pos="0.00564467 0.00187624 0.000115084" quat="0.428536 0.443116 0.55751 0.556046" mass="0.00432528" diaginertia="2.67986e-07 2.48792e-07 7.2319e-08"/>
-      <joint name="right_hand_v3_ring_knuckle_joint" pos="0 0 0" axis="0 0 -1" range="-0.524 0.524" actuatorfrcrange="-30 30" damping="0.05" frictionloss="0.1"/>
+      <joint name="right_hand_v3_ring_knuckle_joint" pos="0 0 0" axis="0 0 -1" range="-0.524 0.524" actuatorfrcrange="-30 30" damping="0.03"/>
       <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.35 0.35 0.35 1" mesh="ph_ring_knuckle"/>
       <geom type="mesh" rgba="0.35 0.35 0.35 1" mesh="ph_ring_knuckle_collision"/>
       <body name="right_hand_v3_ring_proximal_virtual_link" pos="0.015 0.0037 0" quat="0.707107 0.707107 0 0">
         <inertial pos="0 0 0" quat="0.00438927 0.707093 -0.00438927 0.707093" mass="0.00344335" diaginertia="4.50437e-07 4.38553e-07 5.92007e-08"/>
-        <joint name="right_hand_v3_ring_proximal_virtual_joint" pos="0 0 0" axis="0 0 -1" range="0 0.785398" actuatorfrcrange="-30 30" damping="0.05" frictionloss="0.1"/>
-        <body name="right_hand_v3_ring_proximal_link" pos="0.01 0 0">
+        <joint name="right_hand_v3_ring_proximal_virtual_joint" pos="0 0 0" axis="0 0 -1" range="0 0.785398" actuatorfrcrange="-30 30" damping="0.03"/>
+        <body name="right_hand_v3_ring_proximal_link" pos="0.009 0 0">
           <inertial pos="0.00829589 0.000148677 0" quat="0.00438927 0.707093 -0.00438927 0.707093" mass="0.00344335" diaginertia="4.50437e-07 4.38553e-07 5.92007e-08"/>
-          <joint name="right_hand_v3_ring_proximal_joint" pos="0 0 0" axis="0 0 -1" range="0 0.785398" actuatorfrcrange="-30 30" damping="0.05" frictionloss="0.1"/>
+          <joint name="right_hand_v3_ring_proximal_joint" pos="0 0 0" axis="0 0 -1" range="0 0.785398" actuatorfrcrange="-30 30" damping="0.03"/>
           <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.35 0.35 0.35 1" mesh="ph_proximal"/>
           <geom type="mesh" rgba="0.35 0.35 0.35 1" mesh="ph_proximal_collision"/>
           <body name="right_hand_v3_ring_middle_virtual_link" pos="0.016 0 0">
             <inertial pos="0 0 0" quat="0.00438927 0.707093 -0.00438927 0.707093" mass="0.00344335" diaginertia="4.50437e-07 4.38553e-07 5.92007e-08"/>
-            <joint name="right_hand_v3_ring_middle_virtual_joint" pos="0 0 0" axis="0 0 -1" range="0 0.785398" actuatorfrcrange="-30 30" damping="0.05" frictionloss="0.1"/>
-            <body name="right_hand_v3_ring_middle_link" pos="0.01 0 0">
+            <joint name="right_hand_v3_ring_middle_virtual_joint" pos="0 0 0" axis="0 0 -1" range="0 0.785398" actuatorfrcrange="-30 30" damping="0.03"/>
+            <body name="right_hand_v3_ring_middle_link" pos="0.009 0 0">
               <inertial pos="0.00829589 0.000148677 0" quat="0.00438927 0.707093 -0.00438927 0.707093" mass="0.00344335" diaginertia="4.50437e-07 4.38553e-07 5.92007e-08"/>
-              <joint name="right_hand_v3_ring_middle_joint" pos="0 0 0" axis="0 0 -1" range="0 0.785398" actuatorfrcrange="-30 30" damping="0.05" frictionloss="0.1"/>
+              <joint name="right_hand_v3_ring_middle_joint" pos="0 0 0" axis="0 0 -1" range="0 0.785398" actuatorfrcrange="-30 30" damping="0.03"/>
               <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.35 0.35 0.35 1" mesh="ph_proximal"/>
               <geom type="mesh" rgba="0.35 0.35 0.35 1" mesh="ph_proximal_collision"/>
               <body name="right_hand_v3_ring_distal_virtual_link" pos="0.016 0 0">
-                <inertial pos="0 0 0" quat="0.499286 0.509835 0.492245 0.498473" mass="0.00240347" diaginertia="6.16595e-08 5.8551e-08 2.94763e-08"/>
-                <joint name="right_hand_v3_ring_distal_virtual_joint" pos="0 0 0" axis="0 0 -1" range="0 0.785398" actuatorfrcrange="-30 30" damping="0.05" frictionloss="0.1"/>
-                <body name="right_hand_v3_ring_distal_link" pos="0.01 -3.4865e-07 0.0005">
-                  <inertial pos="0.00233796 0.000535801 -0.000450702" quat="0.499286 0.509835 0.492245 0.498473" mass="0.00240347" diaginertia="6.16595e-08 5.8551e-08 2.94763e-08"/>
-                  <joint name="right_hand_v3_ring_distal_joint" pos="0 0 0" axis="0 0 -1" range="0 0.785398" actuatorfrcrange="-30 30" damping="0.05" frictionloss="0.1"/>
+                <inertial pos="0 0 0" quat="0.0131386 0.706985 -0.0131386 0.706985" mass="0.009" diaginertia="6.6782e-07 5.99819e-07 2.654e-07"/>
+                <joint name="right_hand_v3_ring_distal_virtual_joint" pos="0 0 0" axis="0 0 -1" range="0 0.785398" actuatorfrcrange="-30 30" damping="0.03"/>
+                <body name="right_hand_v3_ring_distal_link" pos="0.009 -3.4865e-07 0.0005">
+                  <inertial pos="0.00233796 0.000535801 -0.000450702" quat="0.0131386 0.706985 -0.0131386 0.706985" mass="0.009" diaginertia="6.6782e-07 5.99819e-07 2.654e-07"/>
+                  <joint name="right_hand_v3_ring_distal_joint" pos="0 0 0" axis="0 0 -1" range="0 0.785398" actuatorfrcrange="-30 30" damping="0.03"/>
                   <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.35 0.35 0.35 1" mesh="ph_distal"/>
                   <geom type="mesh" rgba="0.35 0.35 0.35 1" mesh="ph_distal_collision"/>
                 </body>
@@ -159,31 +159,31 @@
     </body>
     <body name="right_hand_v3_little_knuckle_link" pos="0.037 -0.00603068 0.195005" quat="0.561209 0.560762 -0.430288 0.430631">
       <inertial pos="0.00564467 0.00187624 0.000115084" quat="0.428536 0.443116 0.55751 0.556046" mass="0.00432528" diaginertia="2.67986e-07 2.48792e-07 7.2319e-08"/>
-      <joint name="right_hand_v3_little_knuckle_joint" pos="0 0 0" axis="0 0 -1" range="-0.524 0.524" actuatorfrcrange="-30 30" damping="0.05" frictionloss="0.1"/>
+      <joint name="right_hand_v3_little_knuckle_joint" pos="0 0 0" axis="0 0 -1" range="-0.524 0.524" actuatorfrcrange="-30 30" damping="0.03"/>
       <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.35 0.35 0.35 1" mesh="ph_ring_knuckle"/>
       <geom type="mesh" rgba="0.35 0.35 0.35 1" mesh="ph_ring_knuckle_collision"/>
       <body name="right_hand_v3_little_proximal_virtual_link" pos="0.015 0.0037 0" quat="0.707107 0.707107 0 0">
         <inertial pos="0 0 0" quat="0.0101201 0.707034 -0.0101201 0.707034" mass="0.00363253" diaginertia="1.56896e-07 1.55637e-07 5.22263e-08"/>
-        <joint name="right_hand_v3_little_proximal_virtual_joint" pos="0 0 0" axis="0 0 -1" range="0 0.785398" actuatorfrcrange="-30 30" damping="0.05" frictionloss="0.1"/>
-        <body name="right_hand_v3_little_proximal_link" pos="0.01 0 0">
+        <joint name="right_hand_v3_little_proximal_virtual_joint" pos="0 0 0" axis="0 0 -1" range="0 0.785398" actuatorfrcrange="-30 30" damping="0.03"/>
+        <body name="right_hand_v3_little_proximal_link" pos="0.009 0 0">
           <inertial pos="0.00487123 0.000155901 0" quat="0.0101201 0.707034 -0.0101201 0.707034" mass="0.00363253" diaginertia="1.56896e-07 1.55637e-07 5.22263e-08"/>
-          <joint name="right_hand_v3_little_proximal_joint" pos="0 0 0" axis="0 0 -1" range="0 0.785398" actuatorfrcrange="-30 30" damping="0.05" frictionloss="0.1"/>
+          <joint name="right_hand_v3_little_proximal_joint" pos="0 0 0" axis="0 0 -1" range="0 0.785398" actuatorfrcrange="-30 30" damping="0.03"/>
           <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.35 0.35 0.35 1" mesh="ph_proximal_little"/>
           <geom type="mesh" rgba="0.35 0.35 0.35 1" mesh="ph_proximal_little_collision"/>
           <body name="right_hand_v3_little_middle_virtual_link" pos="0.012 0 0">
             <inertial pos="0 0 0" quat="0.0101201 0.707034 -0.0101201 0.707034" mass="0.00363253" diaginertia="1.56896e-07 1.55637e-07 5.22263e-08"/>
-            <joint name="right_hand_v3_little_middle_virtual_joint" pos="0 0 0" axis="0 0 -1" range="0 0.785398" actuatorfrcrange="-30 30" damping="0.05" frictionloss="0.1"/>
-            <body name="right_hand_v3_little_middle_link" pos="0.01 0 0">
+            <joint name="right_hand_v3_little_middle_virtual_joint" pos="0 0 0" axis="0 0 -1" range="0 0.785398" actuatorfrcrange="-30 30" damping="0.03"/>
+            <body name="right_hand_v3_little_middle_link" pos="0.009 0 0">
               <inertial pos="0.00487123 0.000155901 0" quat="0.0101201 0.707034 -0.0101201 0.707034" mass="0.00363253" diaginertia="1.56896e-07 1.55637e-07 5.22263e-08"/>
-              <joint name="right_hand_v3_little_middle_joint" pos="0 0 0" axis="0 0 -1" range="0 0.785398" actuatorfrcrange="-30 30" damping="0.05" frictionloss="0.1"/>
+              <joint name="right_hand_v3_little_middle_joint" pos="0 0 0" axis="0 0 -1" range="0 0.785398" actuatorfrcrange="-30 30" damping="0.03"/>
               <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.35 0.35 0.35 1" mesh="ph_proximal_little"/>
               <geom type="mesh" rgba="0.35 0.35 0.35 1" mesh="ph_proximal_little_collision"/>
               <body name="right_hand_v3_little_distal_virtual_link" pos="0.012 0 0">
-                <inertial pos="0 0 0" quat="0.499286 0.509835 0.492245 0.498473" mass="0.00240347" diaginertia="6.16595e-08 5.8551e-08 2.94763e-08"/>
-                <joint name="right_hand_v3_little_distal_virtual_joint" pos="0 0 0" axis="0 0 -1" range="0 0.785398" actuatorfrcrange="-30 30" damping="0.05" frictionloss="0.1"/>
-                <body name="right_hand_v3_little_distal_link" pos="0.01 -3.4865e-07 0.0005">
-                  <inertial pos="0.00233796 0.000535801 -0.000450702" quat="0.499286 0.509835 0.492245 0.498473" mass="0.00240347" diaginertia="6.16595e-08 5.8551e-08 2.94763e-08"/>
-                  <joint name="right_hand_v3_little_distal_joint" pos="0 0 0" axis="0 0 -1" range="0 0.785398" actuatorfrcrange="-30 30" damping="0.05" frictionloss="0.1"/>
+                <inertial pos="0 0 0" quat="0.0131386 0.706985 -0.0131386 0.706985" mass="0.009" diaginertia="6.6782e-07 5.99819e-07 2.654e-07"/>
+                <joint name="right_hand_v3_little_distal_virtual_joint" pos="0 0 0" axis="0 0 -1" range="0 0.785398" actuatorfrcrange="-30 30" damping="0.03"/>
+                <body name="right_hand_v3_little_distal_link" pos="0.009 -3.4865e-07 0.0005">
+                  <inertial pos="0.00233796 0.000535801 -0.000450702" quat="0.0131386 0.706985 -0.0131386 0.706985" mass="0.009" diaginertia="6.6782e-07 5.99819e-07 2.654e-07"/>
+                  <joint name="right_hand_v3_little_distal_joint" pos="0 0 0" axis="0 0 -1" range="0 0.785398" actuatorfrcrange="-30 30" damping="0.03"/>
                   <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.35 0.35 0.35 1" mesh="ph_distal"/>
                   <geom type="mesh" rgba="0.35 0.35 0.35 1" mesh="ph_distal_collision"/>
                 </body>
